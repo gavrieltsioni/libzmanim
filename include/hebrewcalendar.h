@@ -15,6 +15,10 @@ or connect to: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
 #ifndef HEBREW_CALENDAR_H
 #define HEBREW_CALENDAR_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifndef NOSTDLIB
 	#include <time.h>
 #else
@@ -143,4 +147,9 @@ _Bool isbirchashachama(hdate date);
 _Bool isbirchashashanim(hdate date);
 // return true if tal umatar livrachah is said in birchas hashanim
 _Bool getbirchashashanim(hdate date);
+
+#ifdef __cplusplus
+} // closing extern "C"
+#endif
+
 #endif
