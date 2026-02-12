@@ -692,6 +692,19 @@ parshah getparshah(hdate date)
 	return NOPARSHAH;
 }
 
+parshah getparshahforweek(hdate date)
+{
+	int yearType = getYearType(date);
+	//optimise
+	int yearWday = HebrewCalendarElapsedDays(date.year)%7;
+	int day = yearWday + date.dayofyear;
+	if (yearType >= 0)
+	{
+		return parshahlist[yearType][day/7];
+	}
+	return NOPARSHAH;
+}
+
 yomtov getyomtov(hdate date)
 {
 	switch(date.month)

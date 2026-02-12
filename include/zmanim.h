@@ -109,6 +109,8 @@ hdate getplagmga(hdate date, location here);
 
 hdate getcandlelighting(hdate date, location here);
 
+hdate getcandlelightingminutesbefore(hdate date, location here, int minutes_before);
+
 hdate getsunset(hdate date, location here);
 hdate getsunsetbaalhatanya(hdate date, location here);
 hdate getelevationsunset(hdate date, location here);

@@ -410,6 +410,11 @@ hdate getcandlelighting(hdate date, location here)
 	return calctimeoffset(calcsunset(date, here, GEOMETRIC_ZENITH, 0), -MINUTES18);
 }
 
+hdate getcandlelightingminutesbefore(hdate date, location here, int minutes_before)
+{
+	return calctimeoffset(calcsunset(date, here, GEOMETRIC_ZENITH, 0), -minutes_before * 60000);
+}
+
 hdate getsunset(hdate date, location here)
 {
 	return calcsunset(date, here, GEOMETRIC_ZENITH, 0);

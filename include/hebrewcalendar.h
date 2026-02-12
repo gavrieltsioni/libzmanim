@@ -119,6 +119,8 @@ molad getmolad(int year, int month);
 
 // if Shabbos get the current parshah otherwise return 0
 parshah getparshah(hdate date);
+// gets the current parshah for the upcoming shabbos
+parshah getparshahforweek(hdate date);
 // if yomtov get the current yomtov otherwise return 0
 yomtov getyomtov(hdate date);
 // if Shabbos get the current special parshah otherwise return 0
