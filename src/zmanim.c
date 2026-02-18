@@ -445,6 +445,13 @@ hdate gettzais72(hdate date, location here)
 	return calctimeoffset(getsunset(date, here), MINUTES72);
 }
 
+hdate getchatzoshalailagra(hdate date, location here)
+{
+	hdate chatzoshalaila = getchatzosgra(date, here);
+	hdateaddhour(&chatzoshalaila, 12);
+	return chatzoshalaila;
+}
+
 hdate calcmoladoffset(hdate date, int offsetsec)
 {
 	molad result = getmolad(date.year, date.month);
